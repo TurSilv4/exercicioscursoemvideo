@@ -12,8 +12,8 @@ def fatorial(num, show=False):
         for cont in range(num, 0, -1):
             print(f'{cont}', end='')
             print(' x ' if cont > 1 else ' = ', end='')
-    return f
-
+    else:
+        return print(f'O resultado de {num}! é {f}')
 
 n = int(input('Qual número deseja calcular? '))
 resolução = bool(input('Digite SIM se deseja ver a resolução: [Ignore para não] '))
