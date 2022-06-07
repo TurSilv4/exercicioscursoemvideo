@@ -4,19 +4,22 @@
 
 
 def fatorial(num, show=False):
+    """
+    -> Calcula o fatorial de um numero
+    :param num: Recebe o valor a ser calculado
+    :param show: (opcional) Mortrar ou nao a resoluçao da conta
+    :return: O valor do Fatorial de num
+    """
     f = 1
-
     for cont in range(num, 0, -1):
-        f *= cont
-    if show:
-        for cont in range(num, 0, -1):
+        if show:
             print(f'{cont}', end='')
             print(' x ' if cont > 1 else ' = ', end='')
-    else:
-        return print(f'O resultado de {num}! é {f}')
+        f *= cont
+    return f
 
 n = int(input('Qual número deseja calcular? '))
 resolução = bool(input('Digite SIM se deseja ver a resolução: [Ignore para não] '))
-r = fatorial(n, resolução)
-print(r)
+print(fatorial(n, resolução))
 print('-' * 30)
+help(fatorial)
