@@ -3,13 +3,17 @@
 
 
 def ficha(nome='<desconhecido>', gols=0):
-    n = nome
-    gol = gols
-    print(f'O jogador {n} fez {gol} gol(s) na temporada.')
-
+    print(f'O jogador {nome} fez {gols} gol(s) na temporada.')
 
 
 #Programa principal
-user = input('Nome do jogador: ')
-user_gols = input('Gol(s) do campeonato: ')
-ficha(user, user_gols)
+user = str(input('Nome do jogador: '))
+user_gols = str(input('Gol(s) do campeonato: '))
+if user_gols.isnumeric():
+    user_gols = user_gols
+else:
+    user_gols = 0
+if user.strip() == '':
+    ficha(gols=user_gols)
+else:
+    ficha(user, user_gols)
