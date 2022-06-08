@@ -1,0 +1,2 @@
+Crie uma função chamada leiaInt() que funcioe com input() mas que tenha uma validação de dados
+para que aceite apenas numeros inteiros
