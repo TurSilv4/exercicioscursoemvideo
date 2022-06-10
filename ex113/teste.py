@@ -1,4 +1,4 @@
-from ex113_uteis import *
+from ex113 import *
 
 int = leiaInt('Digite um inteiro: ')
 float = leiaFloat('Digite um Real: ')
