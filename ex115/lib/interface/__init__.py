@@ -1,9 +1,10 @@
 def linha():
     print()
-    print('\033[7;40m \033[m' * 40)
+    print('\033[7;40m \033[m' * 40)  # Linha branca
 
 
 def leiaInt(str):
+    """Lẽ numeros inteiros já com validação de dados"""
     while True:
         try:
             user = int(input(str))
@@ -23,7 +24,7 @@ def cabeçalho(txt):
 
 def menu(lista):
         cabeçalho('MENU PRINCIPAL')
-        for c, item in enumerate(lista):
+        for c, item in enumerate(lista):  # Menu formatado
             print(f'\033[0;33m[ {c+1} ] \033[0;34m{item}\033[m')
         print('-' * 40)
         user = leiaInt('\033[0;33mSua opção: \033[m')

@@ -3,7 +3,7 @@ from ex115.lib.interface import cabeçalho
 def arquivoExiste(nome):
     """Verifica se um arquivo .txt existe"""
     try:
-        a = open(nome, 'rt')
+        a = open(nome, 'rt')  # Abre o arquivo
         a.close()
     except FileNotFoundError:
         return False
@@ -32,10 +32,10 @@ def lerArquivo(nome):
         cabeçalho('PESSOAS CADASTRADAS')
         c = 1
         print(f'\033[0;36m{"No."}  {"Nome":<27}{"Idade"}\033[m')
-        for linha in a:
+        for linha in a:  # Mostra a lista
             dado = linha.split(';')
             dado[1] = dado[1].replace('\n', '')
-            print(f'\033[0;33m {c}\033[m - {dado[0]:<27}{dado[1]} anos')
+            print(f'\033[0;33m{c:2}\033[m - {dado[0]:<27}{dado[1]} anos')
             c += 1
     finally:
         a.close()  # Fecha o arquivo
