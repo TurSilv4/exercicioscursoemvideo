@@ -1,0 +1,10 @@
+arthur;21
+roseane;20
+lorena;15
+jose;75
+jonathan;17
+Janaina;24
+Joaquin;95
+Malaquias;34
+Lucas;12
+Ricardo;37
